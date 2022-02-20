@@ -37,7 +37,40 @@ function generatePassword() {
     var specialCharprompt = confirm("Would you like special characters ?");
     var lowerCaseprompt = confirm("Would you like lower case letters ?");
     var upperCaseprompt = confirm("Would you like upper case letters ?");
-generatePassword();
+
+      generatePassword();
+
+
+var passwordLength = [];
+var newPassword = [];
+
+// merge arrays..? //
+if (numbersConfirm) {
+  passwordLength = passwordLength.concat(number);
+  console.log(passwordLength);
+}
+
+if (specialCharprompt) {
+ passwordLength = passwordLength.concat(specialChar);
+
+  console.log(passwordLength);
+}
+
+if (lowercaseprompt) {
+passwordLength = passwordLength.concat(lowerCase);
+
+  console.log(passwordLength);
+}
+
+if (upperCaseprompt) {
+  passwordLength = passwordLength.concat(upperCase);
+
+  console.log(passwordLength);
+}
+
+
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
