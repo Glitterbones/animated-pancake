@@ -68,9 +68,10 @@ if (upperCaseprompt) {
   console.log(passwordLength);
 }
 
+var randomLetter = passwordLength[Math.floor(Math.random() * passwordLength.length)];
+for (var i = 0; i < numberPrompt; i++)
 
 
-
-
+console.log("Your Pasword is: " + newPassword);
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
