@@ -20,15 +20,24 @@ function writePassword() {
 
 
 function generatePassword() {
-  document.getElementById("click", generatePassword); {
-    for ( let i = 0; i < length; i++ ) {
-      console.log(password);
+  var numberPrompt = parseInt (window.prompt ("How many character would you like ? Min 8 - Max 128"));
+  console.log("password length" + numberPrompt );
+  console.log("password length " + numberPrompt);
+
     }
-  }
+  
+    if (!numberPrompt) {
+      alert ("Value required");
 
+    } else if ( numberPrompt <8 || numberPrompt > 128) {
+      alert ("Invalid");
+    }
 
+    var numbersConfirm = confirm("Would you like numbers ?");
+    var specialCharprompt = confirm("Would you like special characters ?");
+    var lowerCaseprompt = confirm("Would you like lower case letters ?");
+    var upperCaseprompt = confirm("Would you like upper case letters ?");
 generatePassword();
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
